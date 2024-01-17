@@ -1,39 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Examen Tema 5</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="favicon.ico" />
+    <title>Examen T5</title>
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            <h1>Mario y Luigi La Película</h1>
-        </div>
+      <div class="hero-body">
+        <h1>Mario y Luigi La Película</h1>
+        <span>
+          Un fontanero llamado Mario viaja por un laberinto subterráneo con su
+          hermano, Luigi, intentando salvar a una princesa capturada.
+        </span>
+      </div>
     </div>
+    <div class="main">
+      <div class="form">
+        <h2>Contáctanos</h2>
 
-        <div class="main">
-            <div class="form">
+        <fieldset>
                 <form class="formulario" action="/templates/correcto.html" method="get">
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre">
                     <input type="email" name="email" id="email" placeholder="Correo electrónico">
                     <div class="radio">
                         <span>¿Te ha gustado la película?</span>
-                        <input type="radio" name="radio" id="radio1" value="Mario, 1981 ">
+                        <input type="radio" name="radio" id="radio1" value="Mario, 1981" checked>
                         <label for="radio1">Sí</label>
                         <input type="radio" name="radio" id="radio2" value="Luigi, 1983">
                         <label for="radio2">No</label>
-                        <input type="button" value="Info" onclick="comprobar()">
+                        <input type="button" value="Info" onclick="consultar()">
                     </div>
                     <textarea name="observaciones" id="observaciones" cols="30" rows="10" placeholder="Por favor, inserta un mensaje"></textarea>
                     <input class="btn" type="submit" value="Enviar">
                 </form>
-            </div>
-            <ul class="errores" id="errores"></ul>
-        </div>
-    
+          </fieldset>
+
+          <ul class="errores" id="errores"></ul>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const mostrarDatos = () => {
+        document.formulario.actores.forEach((actor) =>
+          actor.checked ? alert(actor.value) : null
+        );
+      };
+      function consultar2() {
+        let objPersonajes = document.getElementById("personaje");
+        let texto = objPersonajes.options[objPersonajes.selectedIndex].text;
+        let valor = objPersonajes.options[objPersonajes.selectedIndex].value;
+        alert(
+          "Datos de la opción seleccionada:\n\nTexto: " +
+            texto +
+            "\nValor: " +
+            valor
+        );
+      }
+    </script>
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
