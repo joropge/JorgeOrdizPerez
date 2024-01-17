@@ -4,6 +4,47 @@
     box-sizing: border-box;
  }
 
- .form{
-   background-color: aqua;
+ :root {
+    --h1-font-size: 6rem;
+    --span-font-size: 2.5rem;
+    --h1-color: black;
+    --span-color: red;
+    --button-color: #ffa600;
+    --height-hero-image: 80dvh;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+    text-wrap: balance;
+ }
+
+ h1 {
+    font-size: var(--h1-font-size);
+ }
+
+ span {
+    text-wrap: balance;
+    font-weight: bold;
+    padding: 5px;
+    background-color: #ffffff36;
+    color: #ffffff;
+    color: black;
+ }
+
+ .errores {
+   
+ }
+
+
+
+ body {
+    background-color: grey;
+ }
+
+ .form {
+    background-color: aqua;
  }

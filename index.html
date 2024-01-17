@@ -16,7 +16,7 @@
 
         <div class="main">
             <div class="form">
-                <form class="formulario" action="index.php" method="post">
+                <form class="formulario" action="/templates/correcto.html" method="get">
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre">
                     <input type="email" name="email" id="email" placeholder="Correo electrónico">
                     <div class="radio">
@@ -31,6 +31,7 @@
                     <input class="btn" type="submit" value="Enviar">
                 </form>
             </div>
+            <ul class="errores" id="errores"></ul>
         </div>
     
     <script src="./js/script.js"></script>
