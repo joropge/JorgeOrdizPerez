@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Examen Tema 5</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Mario y Luigi La Película</h1>
+        </div>
+    </div>
+
+        <div class="main">
+            <div class="form">
+                <form class="formulario" action="index.php" method="post">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input type="email" name="email" id="email" placeholder="Correo electrónico">
+                    <div class="radio">
+                        <span>¿Te ha gustado la película?</span>
+                        <input type="radio" name="radio" id="radio1" value="Mario, 1981 ">
+                        <label for="radio1">Sí</label>
+                        <input type="radio" name="radio" id="radio2" value="Luigi, 1983">
+                        <label for="radio2">No</label>
+                        <input type="button" value="Info" onclick="comprobar()">
+                    </div>
+                    <textarea name="observaciones" id="observaciones" cols="30" rows="10" placeholder="Por favor, inserta un mensaje"></textarea>
+                    <input class="btn" type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
