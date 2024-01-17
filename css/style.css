@@ -35,9 +35,66 @@
     color: black;
  }
 
- .errores {
-   
+ ul {
+    list-style: none;
  }
+
+ .errores {
+    color: rgb(255, 0, 0);
+    font-size: 1rem;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: black;
+    opacity: 0.7;
+    border-radius: 0.5rem;
+    padding: 1rem;
+ }
+
+ @media screen and (max-width: 1024px) {
+    :root {
+       --h1-font-size: 2.5rem;
+       --span-font-size: 1.5rem;
+       --h1-color: #ffffff;
+       --span-color: #ffffff;
+       --button-color: #ffa600;
+       --height-hero-image: 60dvh;
+    }
+ }
+
+ *,
+ ::after,
+ ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .container {
+    background: url(../assets/imgs/MarioyLuigi.png) no-repeat center center/cover;
+    height: var(--height-hero-image);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw)); */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .container::before {
+    content: "";
+    background: whitesmoke;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.3;
+ }
+
+
 
 
 
